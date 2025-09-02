@@ -1,0 +1,5 @@
+/* src/styles/fonts.css */
+:root{
+    --font-brand: "Teko", system-ui, sans-serif;
+    --font-content: "Oxanium", system-ui, sans-serif;
+}

@@ -5,34 +5,27 @@ import styles from './ContactForm.module.css';
 function ContactForm() {
     return (
         <>
-        <h2 id="contacto" className={styles.formTitle}>Let's work together.</h2>
+        <h2 id="contacto" className={styles.formTitle}>Ponte en contacto.</h2>
+        <p className={styles.profileDescription}>Si deseas más información sobre mi perfil o experiencia, no dudes en enviarme un mensaje.</p>
         <section className={styles.form}>
             <form>
-                <h3 className={styles.formSection}>Contact Information.</h3>
+                <h3 className={styles.formSection}>Información de contacto.</h3>
                 <div className={styles.formInput}>
-                    <input type="text" placeholder="Full name" id="nombre" />
+                    <input type="text" placeholder="Nombre completo" id="nombre" />
                 </div>
             <div className={styles.formInput}>
-                <input type="email" placeholder="Email address" id="email" />
+                <input type="email" placeholder="Correo electrónico" id="email" />
             </div>
             <div className={styles.formInput}>
-                <input type="number" placeholder="Phone number" id="phone" />
-            </div>
-            <div className={styles.formInput}>
-                <select className={styles.select} name="reference">
-                <option disabled selected>How did you hear about me?</option>
-                <option value="Web">Website</option>
-                <option value="Social Media">Social Media</option>
-                <option value="Friend or Family">Friend or Family</option>
-                </select>
+                <input type="number" placeholder="Número de teléfono" id="phone" />
             </div>
 
-            <h3 className={`${styles.formSection} ${styles.titleTextarea}`}>Tell me about your project.</h3>
+            <h3 className={`${styles.formSection} ${styles.titleTextarea}`}>Cuéntame sobre la vacante.</h3>
             <div className={styles.formInput}>
                 <textarea
                 className={styles.textarea}
                 rows="10"
-                placeholder="Feel free to share your ideas, questions, or the scope of your project."
+                placeholder="Detalles de la vacante o de la oportunidad laboral."
                 id="message"
                 ></textarea>
             </div>

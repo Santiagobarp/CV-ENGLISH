@@ -1,0 +1,156 @@
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.fondo {
+    width: 100%;
+    display: block;
+}
+
+.logo {
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    z-index: 2;
+    width: 380px;
+}
+
+.revea {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 1.2s ease, transform 1.2s ease;
+    will-change: opacity, transform;
+}
+
+.isVisible {
+    opacity: 1;
+    transform: none;
+}
+
+.title {
+    position: absolute;
+    z-index: 2;
+    top: 10%;
+    left: 8%;
+    font-size: 36px;
+    font-family: "Oxanium";
+}
+
+.content {
+    color: #000;
+    max-inline-size: 70ch;
+    font-size: 20px;
+    letter-spacing: .8px;
+    word-spacing: 2.5px;
+    font-weight: 300;
+    margin: 35px 0px;
+    font-family: "Oxanium";
+}
+
+.containerContent {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    z-index: 2;
+}
+
+@media (prefers-reduced-motion: reduce){ .reveal{opacity:1;transform:none;transition:none} }
+
+/* registramos variables animables */
+@property --glow { syntax: '<percentage>'; inherits: false; initial-value: 0%; }
+@property --ox   { syntax: '<length>';    inherits: false; initial-value: 0px; }
+@property --oy   { syntax: '<length>';    inherits: false; initial-value: 0px; }
+
+.img{
+    position:absolute;
+    width:390px;
+    top:5%;
+    left:69%;
+    z-index:2;
+
+    /* halo negro visible en todo el ciclo */
+    --c:#000;           /* un solo color */
+    --dist:14px;        /* radio de órbita */
+    --blur:26px;        /* difusión del halo */
+    --glow:0%;          /* intensidad animable */
+
+    /* offsets animados */
+    --ox: var(--dist);
+    --oy: 0px;
+
+    /* filtro constante: 2 sombras orbitando + una base suave siempre encendida */
+    filter:
+        drop-shadow(var(--ox) var(--oy) var(--blur)
+        color-mix(in oklab, var(--c) var(--glow), transparent))
+        drop-shadow(calc(-1*var(--ox)) calc(-1*var(--oy)) var(--blur)
+        color-mix(in oklab, var(--c) var(--glow), transparent))
+        drop-shadow(0 0 calc(var(--blur)*.7) rgba(0,0,0,.15));  /* base */
+
+    animation: orbit 1.8s linear infinite;
+    animation-play-state: paused;
+    transition: transform .3s ease, --glow .6s ease;
+    will-change: filter, transform;
+}
+
+.img:hover{
+    animation-play-state: running;
+    --glow: 25%;
+    --dist:4px;        /* leve boost al pasar hover */
+    --blur:6px;
+    transform: scale(1.01);
+    cursor:pointer;
+}
+
+/* 8 pasos: cubre diagonales y elimina huecos */
+@keyframes orbit{
+    0%    { --ox: var(--dist);                --oy: 0px; }
+    12.5% { --ox: var(--dist);                --oy: var(--dist); }
+    25%   { --ox: 0px;                        --oy: var(--dist); }
+    37.5% { --ox: calc(-1*var(--dist));       --oy: var(--dist); }
+    50%   { --ox: calc(-1*var(--dist));       --oy: 0px; }
+    62.5% { --ox: calc(-1*var(--dist));       --oy: calc(-1*var(--dist)); }
+    75%   { --ox: 0px;                        --oy: calc(-1*var(--dist)); }
+    87.5% { --ox: var(--dist);                --oy: calc(-1*var(--dist)); }
+    100%  { --ox: var(--dist);                --oy: 0px; }
+}
+
+@media (prefers-reduced-motion: reduce){ .img{animation:none;transform:none} }
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(12px);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grabbing;
+}
+
+.modalImage {
+    max-width: 90vw;
+    max-height: 90vh;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.08);
+    transition: transform 0.3s ease;
+    animation: fadeIn 0.3s ease;
+    background: transparent;
+    clip-path: inset(0%);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

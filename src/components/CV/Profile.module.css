@@ -1,5 +1,21 @@
 /* src/pages/CV/Profile.module.css */
 
+.CV {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.linkCV {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem; /* espacio entre ícono y texto */
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+}
+
 .profile { 
     background-color: #f3f3f6;
     animation: aparecer 2.4s -.6s both;

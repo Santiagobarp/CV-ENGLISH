@@ -1,0 +1,71 @@
+.container {
+    padding: 96px 100px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.title {
+    font-size: 36px;
+    font-family: "Oxanium", sans-serif;
+    margin-bottom: 72px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 1.2s ease, transform 1.2s ease;
+    will-change: opacity, transform;
+}
+
+.isVisible {
+    opacity: 1;
+    transform: none;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 64px;
+    align-items: start;
+}
+
+.step {
+    transition: transform 0.4s ease;
+}
+
+.step:hover {
+    transform: scale(1.02);
+}
+
+.imageWrapper {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.step:hover .image {
+    transform: scale(1.05);
+}
+
+.step h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-family: "Oxanium";
+}
+
+.step p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.4;
+}

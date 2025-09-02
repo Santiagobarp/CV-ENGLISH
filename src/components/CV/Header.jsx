@@ -7,9 +7,9 @@ function Header() {
         <header className={styles.header}>
             <nav className={styles.headerNav}>
                 <ul className={styles.headerNavList}>
-                    <li className={styles.headerNavItem}><a href="#inicio">About me</a></li>
-                    <li className={styles.headerNavItem}><a href="#proyectos">Portfolio</a></li>
-                    <li className={styles.headerNavItem}><a href="#contacto">Contact me</a></li>
+                    <li className={styles.headerNavItem}><a href="#inicio">Perfil</a></li>
+                    <li className={styles.headerNavItem}><a href="#proyectos">Portafolio</a></li>
+                    <li className={styles.headerNavItem}><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
         </header>

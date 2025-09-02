@@ -1,0 +1,56 @@
+.hero {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.img {
+    width: 100%;
+    display: block;
+}
+
+.logo {
+    position: absolute;
+    height: auto;
+    width: 420px;
+    top: 35%;
+    left: 1%;
+    z-index: 2;
+}
+
+.content {
+    position: absolute;
+    left: 70%;
+    top: 30%;
+    z-index: 2;
+    color: #fff;
+    max-inline-size: 32ch;
+    font-family: "Oxanium";
+    font-size: 20px;
+    font-weight: 400;
+    word-spacing: 3px;
+    text-align: right;
+    line-height: 1.6;
+    font-synthesis: none;
+    text-shadow: 0 1px 20px rgba(0,0,0,.35);
+}
+
+/* Revelado simple (sin keyframes) */
+.reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+    will-change: opacity, transform;
+    transition-delay: 1.2s;
+}
+
+.isVisible {
+    opacity: 1;
+    transform: none;
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .logo, .content { transition-delay: 0ms; }
+}
