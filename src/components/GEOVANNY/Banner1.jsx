@@ -26,10 +26,10 @@ function Banner1() {
 
     return (
         <section ref={rootRef} className={styles.hero}>
-            <img className={styles.img} src="/CV/assets/geovanny/fondo-banner1.png" loading="lazy" alt="" />
+            <img className={styles.img} src="/CV-ESPANOL/assets/geovanny/fondo-banner1.png" loading="lazy" alt="" />
             <img
                 className={`${styles.logo} ${styles.reveal}`}
-                src="/CV/assets/geovanny/geovanny-racing-team-logo.png"
+                src="/CV-ESPANOL/assets/geovanny/geovanny-racing-team-logo.png"
                 alt="LOGO GEOVANNY RACING TEAM"
             />
             <p className={`${styles.content} ${styles.reveal}`}>

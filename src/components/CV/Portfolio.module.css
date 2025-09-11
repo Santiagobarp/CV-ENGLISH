@@ -1,5 +1,10 @@
 /* src/pages/CV/Portfolio.module.css */
 
+html { 
+    scroll-padding-top: 40px; 
+    scroll-behavior: smooth;
+}
+
 .portfolio {
     background-color: #f3f3f6;
     padding: 60px 20px;
@@ -50,7 +55,7 @@
 
 .portfolioCardContent {
     width: 100%;
-    padding: 2rem;
+    padding: 10px 2rem;
     text-align: left;
     background: #f0f0f0;
 }
@@ -58,7 +63,7 @@
 .portfolioCardTitle {
     font-size: 24px;
     font-weight: 700;
-    margin: 0 0 8px;
+    margin: 16px 0 2px 0;
 }
 
 .portfolioCardTitle a {
@@ -75,4 +80,36 @@
     color: #444;
     line-height: 1.6;
     font-weight: 400;
+    margin: 0 0 20px 0;
+}
+
+.skillsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0 16px 0;
+    justify-content: start;
+}
+
+.skillPill {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #e5e5e5;
+    border-radius: 8px;
+    color: #333;
+    transition: transform 0.2s;
+    white-space: nowrap;
+}
+
+.skillPill:hover {
+    transform: scale(1.05);
+}
+
+.skillIcon {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
 }

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import styles from './Banner2.module.css';
-
+ 
 function Banner2() {
     const rootRef = useRef(null);
     const [showModal, setShowModal] = useState(false);
@@ -27,7 +27,7 @@ function Banner2() {
 
     return (
         <section ref={rootRef} className={styles.hero}>
-            <img className={styles.fondo} src="/CV/assets/geovanny/banner2-fondo.png" alt="" />
+            <img className={styles.fondo} src="/CV-ESPANOL/assets/geovanny/banner2-fondo.png" alt="" />
             <div className={styles.containerContent}>
                 <h2 className={`${styles.reveal} ${styles.title}`}>Conecta. Pedalea. Compite</h2>
                 <p className={`${styles.content} ${styles.reveal}`}>
@@ -41,7 +41,7 @@ function Banner2() {
             <div className={styles.imgWrap}>
                 <img
                     className={`${styles.img} ${styles.reveal}`}
-                    src="/CV/assets/geovanny/img-banner2.png"
+                    src="/CV-ESPANOL/assets/geovanny/img-banner2.png"
                     alt=""
                     onClick={() => setShowModal(true)}
                 />
@@ -49,7 +49,7 @@ function Banner2() {
 
             {showModal && (
                 <div className={styles.modal} onClick={() => setShowModal(false)}>
-                    <img className={styles.modalImage} src="/CV/assets/geovanny/img-banner2.png" alt="Imagen ampliada" />
+                    <img className={styles.modalImage} src="/CV-ESPANOL/assets/geovanny/img-banner2.png" alt="Imagen ampliada" />
                 </div>
             )}
         </section>

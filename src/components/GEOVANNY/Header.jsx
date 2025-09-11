@@ -11,7 +11,7 @@ function Header() {
 
         <a href="#" className={styles.center} aria-label="Inicio">
             {/* Por qué: nombre correcto de la clase para poder controlar tamaño */}
-            <img className={styles.logo} src="/CV/assets/geovanny/geovanny-logo.png" alt="GEOVANNY" />
+            <img className={styles.logo} src="/CV-ESPANOL/assets/geovanny/geovanny-logo.png" alt="GEOVANNY" />
         </a>
 
         <nav className={styles.right} aria-label="Cuenta y búsqueda">

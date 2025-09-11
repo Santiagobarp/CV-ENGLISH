@@ -4,12 +4,12 @@ import styles from './Experience.module.css';
 
 function Experience() {
     return (
-        <div className={styles.profileEduExpContainer}>
+        <div id="experiencia" className={styles.profileEduExpContainer}>
             
             {/*-- Education --*/}
             <div className={styles.profileColumn}>
                 <h2>
-                    <img src="/CV/assets/Icons TS/EDUCATION.png" alt="Education icon" className={styles.skillIcon} />
+                    <img src="/CV-ESPANOL/assets/Icons TS/EDUCATION.png" alt="Education icon" className={styles.skillIcon} />
                 Educación
                 </h2>
                 <p className={styles.eduItem}>Instituto Tecnológico de Estudios Superiores de Occidente</p>
@@ -25,7 +25,7 @@ function Experience() {
             {/*-- Experience --*/}
             <div className={styles.profileColumn}>
                 <h2>
-                    <img src="/CV/assets/Icons TS/WORK.png" alt="Work icon" className={styles.skillIcon} />
+                    <img src="/CV-ESPANOL/assets/Icons TS/WORK.png" alt="Work icon" className={styles.skillIcon} />
                 Experiencia
                 </h2>
                 <div className={styles.experienceItem}>

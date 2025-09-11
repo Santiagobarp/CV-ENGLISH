@@ -1,4 +1,8 @@
 /* src/pages/CV/Experience.module.css */
+html {
+    scroll-padding-top: 250px; 
+    scroll-behavior: smooth;
+}
 
 .profileEduExpContainer {
     display: flex;

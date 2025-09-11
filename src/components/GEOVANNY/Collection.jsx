@@ -34,12 +34,12 @@ function Collection() {
                 <div className={styles.imageContainer}>
                 <img
                     className={styles.image}
-                    src={`/CV/assets/geovanny/item${item}-a.png`}
+                    src={`/CV-ESPANOL/assets/geovanny/item${item}-a.png`}
                     alt={`Producto ${item}`}
                 />
                 <img
                     className={styles.imageHover}
-                    src={`/CV/assets/geovanny/item${item}-b.png`}
+                    src={`/CV-ESPANOL/assets/geovanny/item${item}-b.png`}
                     alt={`Producto ${item} alternativo`}
                 />
                 </div >

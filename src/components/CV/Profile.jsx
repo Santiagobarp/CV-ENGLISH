@@ -4,11 +4,11 @@ import styles from './Profile.module.css';
 
 function Profile() {
     return (
-        <section id="inicio" className={styles.profile}>
+        <section id="perfil" className={styles.profile}>
         <div className={styles.profileWrapper}>
             {/*-- IMG --*/}
             <div className={styles.profileImgContainer}>
-            <img src="/CV/assets/SBP.jpg" className={styles.profileImg} alt="Profile" />
+            <img src="/CV-ESPANOL/assets/SBP.jpg" className={styles.profileImg} alt="Profile" />
             </div>
 
             {/*-- CONTENEDOR DE INFO --*/}
@@ -26,7 +26,7 @@ function Profile() {
                 <span className="material-symbols-outlined" style={{ color: '#000' }}>
                     download
                 </span>
-                <a className={styles.linkCV} href="/CV/CV-Santiago-Barragan.pdf" download="CV-Santiago-Barragan.pdf">CV en PDF</a>
+                <a className={styles.linkCV} href="/CV-ESPANOL/CV-Santiago-Barragan.pdf" download="CV-Santiago-Barragan.pdf">CV en PDF</a>
                 </div>
 
                 {/*-- Habilidades Técnicas --*/}
@@ -36,7 +36,7 @@ function Profile() {
                     {['HTML', 'CSS', 'JS', 'REACT', 'GIT', 'GITHUB', 'PYTHON', 'UX/UI'].map((skill) => (
                     <div className={styles.skillPill} key={skill}>
                         <img
-                        src={`/CV/assets/Icons TS/${skill.replace('/', '_')}.png`} // requiere archivo UX-UI.png
+                        src={`/CV-ESPANOL/assets/Icons TS/${skill.replace('/', '_')}.png`} // requiere archivo UX-UI.png
                         alt={`${skill} icon`}
                         className={styles.skillIcon}
                         />
@@ -60,7 +60,7 @@ function Profile() {
                     ].map(({ label, icon }) => (
                     <div className={styles.skillPill} key={icon}>
                         <img
-                        src={`/CV/assets/Icons SS/${icon}.png`}
+                        src={`/CV-ESPANOL/assets/Icons SS/${icon}.png`}
                         alt={`${label} icon`}
                         className={styles.skillIcon}
                         />
@@ -79,7 +79,7 @@ function Profile() {
                     return (
                         <div className={styles.skillPill} key={skill}>
                         <img
-                            src={`/CV/assets/Icons TS/${skill}.png`}
+                            src={`/CV-ESPANOL/assets/Icons TS/${skill}.png`}
                             alt={`${skill} icon`}
                             className={styles.skillIcon}
                         />
@@ -92,6 +92,26 @@ function Profile() {
 
             </div>
             </div>
+        </div>
+
+        <div id="contacto" className={styles.profileContact}>
+            <h2>Contáctame</h2>
+            <div className={styles.skillsWrapper}>
+                    {[
+                    { label: 'santiagobarp10@gmail.com', icon: 'email' },
+                    { label: '+52 33 1943 1529', icon: 'whatsapp' },
+                    { label: 'www.linkedin.com/in/santiago-barragán-pinzón', icon: 'linkedin' },
+                    ].map(({ label, icon }) => (
+                    <div className={styles.skillPill} key={icon}>
+                        <img
+                        src={`/CV-ESPANOL/assets/Icons SS/${icon}.png`}
+                        alt={`${label} icon`}
+                        className={styles.skillIcon}
+                        />
+                        {label}
+                    </div>
+                    ))}
+                </div>
         </div>
         </section>
     );

@@ -36,7 +36,7 @@
 }
 
 /* Revelado simple (sin keyframes) */
-.reveal {
+.reveal { 
     opacity: 0;
     transform: translateY(12px);
     transition: opacity 1.5s ease, transform 1.5s ease;

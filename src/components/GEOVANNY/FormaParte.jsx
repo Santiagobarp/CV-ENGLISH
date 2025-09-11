@@ -5,19 +5,19 @@ const steps = [
     {
         title: "Adquiere tu uniforme",
         description: "Compra el uniforme oficial del GEOVANNY RACING TEAM y espera tu pedido.",
-        image: "/CV/assets/geovanny/uniforme.png", // reemplaza por tu asset
+        image: "/CV-ESPANOL/assets/geovanny/uniforme.png", // reemplaza por tu asset
         alt: "Uniforme"
     },
     {
         title: "Escanea y únete",
         description: "Una vez que recibas tu kit, escanea el código QR y únete a la comunidad.",
-        image: "/CV/assets/geovanny/unete.png",
+        image: "/CV-ESPANOL/assets/geovanny/unete.png",
         alt: "QR escaneado"
     },
     {
         title: "Comparte tus experiencias.",
         description: "Sube tus logros, entrena con nosotros y conecta.",
-        image: "/CV/assets/geovanny/comunidad.png",
+        image: "/CV-ESPANOL/assets/geovanny/comunidad.png",
         alt: "Comunidad"
     }
 ];

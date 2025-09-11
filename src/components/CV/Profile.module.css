@@ -1,5 +1,10 @@
 /* src/pages/CV/Profile.module.css */
 
+html {
+    scroll-padding-top: 80px; 
+    scroll-behavior: smooth;
+}
+
 .CV {
     display: flex;
     justify-content: start;
@@ -20,23 +25,24 @@
     background-color: #f3f3f6;
     animation: aparecer 2.4s -.6s both;
     font-family: 'SF Pro Display', sans-serif;
-    display: flex;
     justify-content: center;
+    padding-bottom: 30px;
+    margin: 0;
 }
 
 .profileWrapper {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     background-color: #f3f3f6;
-    max-width: 1400px;
     position: relative;
+    margin: 0;
+    gap: 10px;
 }
 
 .profileImgContainer {
-    flex: 1;
+    flex: 0 0 40%;
     display: flex;
-    max-width: 500px;
+    max-width: 650px;
     border-radius: 10px;
     margin: 30px 10px;
     flex-direction: column;
@@ -51,11 +57,11 @@
 }
 
 .profileDataContainer {
-    max-width: 600px;
+    max-width: 650px;
     padding: 40px;
     background-color: #fff;
     border-radius: 10px;
-    flex: 1;
+    flex: 0 0 60%;
     display: flex;
     margin: 30px 10px;
     justify-content: center;
@@ -124,6 +130,18 @@
     margin-right: 6px;
 }
 
+.profileContact {
+    max-width: 900px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    flex: 1;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
 
 
 @container profile (min-width: 56.25rem) {
@@ -134,7 +152,6 @@
     margin: 0 auto;
     gap: 40px;
 }
-
 }
 
 

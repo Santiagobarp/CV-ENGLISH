@@ -1,6 +1,10 @@
 /* src/components/CV/Header.module.css */
 
 /* ----- HEADER SECTION ------ */
+html {
+    scroll-padding-top: 250px; 
+    scroll-behavior: smooth;
+}
 
 .header {
     background-color: #fff;
